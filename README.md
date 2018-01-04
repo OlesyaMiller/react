@@ -1,27 +1,13 @@
-testing 
+#routes needed:
+
+# GET /api/notes
+# GET /api/note/:id
+# POST /api/notes
+# PUT /api/note/:id
+# DELETE /api/note/:id
 
 
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Note model
+# title
+# summary
+# img_url
