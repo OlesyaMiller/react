@@ -34,7 +34,6 @@ class Api::NotesController < ApplicationController
     end
   end
 
-
   private
 
   def set_note
