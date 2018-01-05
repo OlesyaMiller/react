@@ -16,8 +16,6 @@ ActiveRecord::Schema.define(version: 20180104023912) do
     t.string "title"
     t.string "summary"
     t.string "img_url"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
 end
