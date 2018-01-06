@@ -27,6 +27,7 @@
   padding: 16px;
 }
 .NoteCard {
+
   overflow-wrap: break-word;
   float: left;
   margin: .50%;
@@ -38,9 +39,25 @@
 }
 
 .NoteCard:hover {
-box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  -webkit-animation-name: wiggle;
+  -webkit-animation-duration: 400ms;
+  -webkit-animation-count: 2;
+  -webkit-animation-function: ease-in-out;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 .NoteImage {
   width: 30%;
+}
+
+@keyframes wiggle {
+  50% {
+    transform: rotate( -3deg);
+  }
+  70% {
+    transform: rotate( 3deg);
+  }
+  100% {
+    transform: rotate( 0deg);
+  }
 }
