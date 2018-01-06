@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
+import BookForm from './BookForm';
 
 
   class Books extends Component {
     render(){
       return (
-        <h3> Your Notes: </h3>
+        <div>
+          <h3> Your Notes: </h3>
+          <BookForm />
+        </div>
       )
     }
   }
