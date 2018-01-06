@@ -1,12 +1,10 @@
 import React from 'react';
 
 const NavBar = () =>
-          <div className="navWide">
-            <div className="wideDiv">
-              <a href="#">Link 1</a>
-              <a href="#">Link 2</a>
-              <a href="#">Link 3</a>
-            </div>
+          <div className="navbar">
+            <a href="#">Home</a>
+            <a href="#">Contact</a>
+            <a href="#">About</a>
           </div>
 
 export default NavBar;
