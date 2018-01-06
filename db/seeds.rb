@@ -7,4 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-Note.create(title: 'Hello', summary: "testing", img_url: nil)
+Note.create(content: 'This book is great', book_id: 1)
+Note.create(content: 'This book is amazing', book_id: 2)
+Note.create(content: 'My favorite book', book_id: 3)
+
+
+# Book.create(title: 'Harry Potter and the Chamber of Secrets', author: "JK Rowling", img_url: nil)
+# Book.create(title: 'Harry Potter and the Half Blood Prince', author: "JK Rowling", img_url: nil)
+# Book.create(title: 'Harry Potter and the Prisoner of Azkaban', author: "JK Rowling", img_url: nil)
