@@ -5,11 +5,12 @@
 import React, { Component } from 'react';
 import './App.css'
 import Notes from './components/Notes';
+import Footer from './components/Footer';
 
 const notes = [
   {
     title: "Harry Potter",
-    summary: "This book is about the struggles of wizards when threatened by an evil force jahfahsdfalshdfhafjhasdufhlahef;aerieuwiajsfkhadguiwegiuaweiwpoeuweyabgj.dahfhaioag",
+    summary: "This book is about the struggles of wizards when threatened by an evil force",
     img_url: "https://images-na.ssl-images-amazon.com/images/I/71Ui-NwYUmL.jpg"
   },
   {
@@ -46,8 +47,11 @@ class App extends Component {
   render () {
     console.log(this.state)
     return (
-      <div className='App'>
-        <Notes notes={notes}/>
+      <div>
+        <div className='App'>
+          <Notes notes={notes}/>
+        </div>
+        <Footer />
       </div>
     );
   }
