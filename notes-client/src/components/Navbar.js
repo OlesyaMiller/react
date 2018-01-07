@@ -4,9 +4,26 @@ import { NavLink } from 'react-router-dom';
 const NavBar = () => {
   return (
     <div className="navbar">
-      <a href="#">Home</a>
-      <a href="#">Contact</a>
-      <a href="#">About</a>
+      <NavLink
+          to="/"
+          exact
+          activeStyle={{
+            color: 'white'
+          }}
+        >Home </NavLink> |
+
+        <NavLink
+          to="/contact"
+          activeStyle={{
+            color: 'white'
+          }}
+        > Contact</NavLink> |
+        <NavLink
+          to="/about"
+          activeStyle={{
+            color: 'white'
+          }}
+        > About </NavLink>
     </div>
 
   )
