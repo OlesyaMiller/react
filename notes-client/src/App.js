@@ -9,25 +9,6 @@ import Footer from './components/Footer';
 import Contact from './components/Contact';
 import Navbar from './components/Navbar';
 
-const books = [
-  {
-    title: "Harry Potter and the Prisoner of Azkaban",
-    author: "JK Rowling",
-    img_url: "https://images-na.ssl-images-amazon.com/images/I/71Ui-NwYUmL.jpg"
-  },
-  {
-    title: "Lord of the Rings",
-    author: "Tolkien",
-    img_url: "https://images-na.ssl-images-amazon.com/images/I/51EstVXM1UL._SX331_BO1,204,203,200_.jpg"
-
-  },
-  {
-    title: "The Crucible",
-    author: "Arthur Miller",
-    img_url: "https://upload.wikimedia.org/wikipedia/en/thumb/7/75/Cruciblecover.jpg/220px-Cruciblecover.jpg"
-
-  }
-]
 
 class App extends Component {
 
@@ -39,7 +20,7 @@ class App extends Component {
           <h1 className="App-title">Book-Notes</h1>
           <Navbar />
         </header>
-          <Books books={books}/>
+          <Books/>
         </div>
         <Footer/>
       </div>
