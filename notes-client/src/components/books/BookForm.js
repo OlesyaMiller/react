@@ -31,7 +31,7 @@ import React, { Component } from 'react';
       return (
         <div>
           <h4>Add a Book</h4>
-          <form onSubmit={(event) => this.handleOnSubmit(event)}>
+          <form className="BookForm" onSubmit={(event) => this.handleOnSubmit(event)}>
             <label htmlFor="title"><b>Book Title:</b> </label>
             <input
               type="text"
