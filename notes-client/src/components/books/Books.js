@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import BookForm from './BookForm';
+import BookList from './BookList'
 
 
   class Books extends Component {
@@ -21,8 +22,8 @@ import BookForm from './BookForm';
     render(){
       return (
         <div>
-          <h3> Your Notes: </h3>
           <BookForm onSubmit={this.addBook.bind(this)}/>
+          <BookList books={this.state.books}/>
         </div>
       )
     }

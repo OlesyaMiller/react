@@ -30,9 +30,9 @@ import React, { Component } from 'react';
     render(){
       return (
         <div>
-          <h4><button> Add a Book </button></h4>
+          <h4>Add a Book</h4>
           <form onSubmit={(event) => this.handleOnSubmit(event)}>
-            <label htmlFor="title">Book Title: </label>
+            <label htmlFor="title"><b>Book Title:</b> </label>
             <input
               type="text"
               name="title"
@@ -42,7 +42,7 @@ import React, { Component } from 'react';
 
             <br />
 
-            <label htmlFor="author">Book Author: </label>
+            <label htmlFor="author"><b>Book Author:</b> </label>
             <input
               type="text"
               name="author"
@@ -52,7 +52,7 @@ import React, { Component } from 'react';
 
             <br />
 
-            <label htmlFor="img_url">Book Image link: </label>
+            <label htmlFor="img_url"><b>Book Image link:</b> </label>
             <input
               type="text"
               name="img_url"
