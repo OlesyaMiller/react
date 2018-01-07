@@ -30,7 +30,7 @@ import React, { Component } from 'react';
           <form className="NoteForm" onSubmit={(event) => this.handleOnSubmit(event)}>
             <label htmlFor="content"><b>Notes:</b> </label>
             <input
-              type="text"
+              type="textarea"
               name="content"
               value={this.state.content}
               onChange={(event) => this.handleChange(event)}
