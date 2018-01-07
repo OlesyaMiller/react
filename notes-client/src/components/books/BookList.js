@@ -1,22 +1,54 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const handleOnClick = () => {
-  debugger;
-}
+const BookList = (props) => {
 
-const BookList = (props) =>
-  <div className="BookContainer">
-  <h2> Your Notes </h2>
-    <div>
-    {props.books.map((book, index) =>
+  let books = props.books.map((book, index) => {
+    return (
       <div className="BookCard" key={index} >
         <h4> {book.title}</h4>
         <h5> {book.author}</h5>
-        <h5><img className="BookImage" src={book.img_url} alt={book.title}/> </h5>
-        <button onClick={this.handleOnClick}>Edit Book</button>
+        <h5><img className="BookImage" src={book.img_url} alt={book.title} /> </h5>
       </div>
-    )}
-    </div>
-  </div>
+    )
+  })
+
+    return (
+      <div className="BookContainer">
+        <h4> Your Notes </h4>
+        {books}
+      </div>
+    )
+  }
 
 export default BookList;
+
+
+
+
+
+
+
+// class BookList extends Component {
+//
+//   handleOnClick = (id, event) => {
+//     this.props.onEdit(id);
+//   }
+//
+// render() {
+//   const { books } = this.props;
+//
+//   const { bookList } = books.map((book, index) => {
+//     return (
+//       <div className="BookCard" key={index} >
+//               <h4> {book.title}</h4>
+//               <h5> {book.author}</h5>
+//               <h5><img className="BookImage" src={book.img_url} alt={book.title} /> </h5>
+//       </div>
+//     )
+//   })
+//
+//   return (
+//     {bookList}
+//   );
+// }
+// }

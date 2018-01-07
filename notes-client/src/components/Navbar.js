@@ -18,6 +18,7 @@ const NavBar = () => {
             color: 'white'
           }}
         > Contact</NavLink> |
+        
         <NavLink
           to="/about"
           activeStyle={{
