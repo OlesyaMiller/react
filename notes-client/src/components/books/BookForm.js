@@ -22,7 +22,7 @@ import * as actions from '../../Actions/BookAction';
 
     handleOnSubmit = (event) => {
       event.preventDefault();
-      this.props.onSubmit(this.state);
+      this.props.actions.createBook(this.state);
       this.setState({
         title: '',
         author: '',

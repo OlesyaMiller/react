@@ -3,7 +3,7 @@ export default function BookReducer( state = {
 }, action) {
     switch(action.type){
       case "CREATE_BOOK":
-        return {...state, books:[...state.classrooms, action.payload]}
+        return {...state, books: [...state.books, action.payload]}
       default: //this just returns default state with no changes made
         return state;
     }

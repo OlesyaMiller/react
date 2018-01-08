@@ -10,8 +10,7 @@ import React, { Component } from 'react';
     }
 
     handleChange = (event) => {
-      const { name, value} = event.target;
-
+      const { name, value } = event.target;
       this.setState({[name]: value});
     }
 
@@ -28,7 +27,7 @@ import React, { Component } from 'react';
         <div>
           <h4>Add a Note</h4>
           <form className="NoteForm" onSubmit={(event) => this.handleOnSubmit(event)}>
-            <label htmlFor="content"><b>Notes:</b> </label>
+            <label htmlFor="content"><b>Enter notes:</b> </label>
             <input
               type="textarea"
               name="content"
