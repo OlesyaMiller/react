@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as actions from '../../Actions/BookAction';
 
   class BookForm extends Component {
     constructor(props) {
@@ -69,4 +72,8 @@ import React, { Component } from 'react';
     }
   }
 
-export default BookForm;
+  const mapDispatchToProps = (dispatch) => {
+     return { actions: bindActionCreators(actions, dispatch)};
+  }
+
+export default connect(null, mapDispatchToProps)(BookForm)
