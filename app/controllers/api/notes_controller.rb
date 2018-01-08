@@ -2,8 +2,8 @@ class Api::NotesController < ApplicationController
   before_action :set_note, only: [:show, :update, :destroy]
 
   def index
-    @note = Note.all
-    render json: @note
+    @notes = Note.all
+    render json: @notes
   end
 
   def create
@@ -42,7 +42,7 @@ class Api::NotesController < ApplicationController
   end
 
   def note_params
-    params.require(:note).permit(:title, :summary, :img_url)
+    params.require(:note).permit(:content, :book_id)
   end
 
 end
