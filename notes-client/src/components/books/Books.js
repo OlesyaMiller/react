@@ -5,9 +5,10 @@ import BookForm from './BookForm';
 import BookList from './BookList'
 
 class Books extends Component {
-  constructor(props) {
-    super(props);
-  }
+  //why dont we need a constructor after redux??
+  // constructor(props) {
+  //   super(props);
+  // }
 
   // addBook = (book) => {
   //   this.setState({
