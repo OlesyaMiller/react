@@ -1,30 +1,32 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
 import BookForm from './BookForm';
 import BookList from './BookList'
 
 class Books extends Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      books: []
-    }
   }
 
-  addBook = (book) => {
-    this.setState({
-      books: [...this.state.books, book]
-    })
-  }
+  // addBook = (book) => {
+  //   this.setState({
+  //     books: [...this.state.books, book]
+  //   })
+  // }
 
   render() {
     return (
       <div>
-        <BookForm onSubmit={this.addBook.bind(this)} />
-        <BookList books={this.state.books} />
+        <BookForm />
+        <BookList books={this.props.books} />
       </div>
     )
   }
 }
 
-export default Books;
+const mapStateToProps = (state) => {
+  return { books: state.books.books }
+}
+
+export default connect(mapStateToProps, null)(Books);
