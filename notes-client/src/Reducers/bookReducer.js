@@ -8,3 +8,13 @@ export default function BookReducer( state = {
         return state;
     }
   }
+
+
+
+
+// case "FETCH_BOOKS":
+//   return {...state, books: [...state.books, action.payload]}
+// case "REMOVE_BOOK":
+// let books = state.filter(book => book.id !== action.book.id)
+      // return books
+//
