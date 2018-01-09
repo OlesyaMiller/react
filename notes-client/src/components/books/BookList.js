@@ -2,7 +2,7 @@ import React from 'react';
 
 const BookList = (props) => {
 
-  let books = props.books.map((book, index) => {
+  const books = props.books.map((book, index) => {
     return (
       <div className="BookCard" key={index} >
         <h4> {book.title}</h4>
