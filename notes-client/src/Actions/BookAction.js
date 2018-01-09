@@ -1,12 +1,12 @@
 import fetch from 'isomorphic-fetch';
 
-// export function createBook(book){
-//   return {
-//     type: "CREATE_BOOK",
-//     payload: book,
-//   }
-// };
-
+export function fetchBooks() {
+  return (dispatch) => {
+    return fetch('http://localhost:3000/api/books')
+      .then(res => res.json())
+      .then(data => dispatch({ type: 'FETCH_BOOKS', payload: data}))
+  }
+}
 
 export function createBook(book) {
   return (dispatch) => {

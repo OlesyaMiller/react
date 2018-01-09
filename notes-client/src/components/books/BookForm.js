@@ -16,7 +16,6 @@ import * as actions from '../../Actions/BookAction';
 
     handleChange = (event) => {
       const { name, value } = event.target;
-
       this.setState({[name]: value});
     }
 
