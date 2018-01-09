@@ -13,6 +13,11 @@ import About from './components/About';
 
 class App extends Component {
 
+  // componentDidMount() {
+  //   this.props.fetchBooks();
+  //   this.props.fetchNotes();
+  // }
+
   render () {
     return (
       <div>
