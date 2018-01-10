@@ -1,16 +1,23 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import {deleteBook} from '../../Actions/BookAction';
+
 
 import BookForm from './BookForm';
 import BookList from './BookList'
 
 class Books extends Component {
 
+  handleOnClick = (book) => {
+     this.props.deleteBook(book)
+  }
+
   render() {
     return (
       <div>
         <BookForm />
-        <BookList books={this.props.books} />
+        <BookList books={this.props.books} handleOnClick={this.handleOnClick} />
       </div>
     )
   }
@@ -20,16 +27,8 @@ const mapStateToProps = (state) => {
   return { books: state.books.books }
 }
 
-export default connect(mapStateToProps, null)(Books);
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({ deleteBook }, dispatch)
+}
 
-
-//why dont we need a constructor after redux??
-// constructor(props) {
-//   super(props);
-// }
-
-// addBook = (book) => {
-//   this.setState({
-//     books: [...this.state.books, book]
-//   })
-// }
+export default connect(mapStateToProps, mapDispatchToProps, null)(Books);

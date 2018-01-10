@@ -5,7 +5,7 @@ const NavBar = () => {
   return (
     <div className="navbar">
       <NavLink
-          to="/"
+          to="/home"
           exact
           activeStyle={{
             color: 'white'
@@ -18,7 +18,7 @@ const NavBar = () => {
             color: 'white'
           }}
         > Contact</NavLink> |
-        
+
         <NavLink
           to="/about"
           activeStyle={{

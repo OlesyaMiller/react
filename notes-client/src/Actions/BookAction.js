@@ -27,3 +27,10 @@ export function createBook(book) {
 //     return fetch(`http://localhost:3000/api/${book.id}`, {
 //       method: 'DELETE',
 // }
+
+export function deleteBook(book) {
+  return {
+    type: 'REMOVE_BOOK',
+    book
+  };
+};
