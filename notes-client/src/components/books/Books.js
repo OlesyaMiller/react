@@ -5,16 +5,7 @@ import BookForm from './BookForm';
 import BookList from './BookList'
 
 class Books extends Component {
-  //why dont we need a constructor after redux??
-  // constructor(props) {
-  //   super(props);
-  // }
 
-  // addBook = (book) => {
-  //   this.setState({
-  //     books: [...this.state.books, book]
-  //   })
-  // }
 
   render() {
     return (
@@ -31,3 +22,15 @@ const mapStateToProps = (state) => {
 }
 
 export default connect(mapStateToProps, null)(Books);
+
+
+//why dont we need a constructor after redux??
+// constructor(props) {
+//   super(props);
+// }
+
+// addBook = (book) => {
+//   this.setState({
+//     books: [...this.state.books, book]
+//   })
+// }
