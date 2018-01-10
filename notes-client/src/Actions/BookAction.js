@@ -21,3 +21,9 @@ export function createBook(book) {
       .then(data => dispatch( { type: 'CREATE_BOOK', payload: data }))
   }
 }
+
+// export function deleteBook(book) {
+//   return (dispatch) => {
+//     return fetch(`http://localhost:3000/api/${book.id}`, {
+//       method: 'DELETE',
+// }
