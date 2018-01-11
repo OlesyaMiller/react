@@ -1,15 +1,23 @@
+//note lists presentational component
+
 import React from 'react';
 
-const NoteList = (props) =>
-  <div className="NoteContainer">
-    <div>
-    {props.notes.map((note, index) =>
-      <div className="NoteCard" key={index} >
-        <h4> Notes: </h4>
-        <h5> {note.content}</h5>
+const NoteList = (props) => {
+
+  const notes = props.notes.map((note, index) => {
+    return (
+      <div className="NoteCard" key={note.id}>
+        <h4> {note.content}</h4>
       </div>
-    )}
-    </div>
-  </div>
+    )
+  })
+
+    return (
+      <div className="NoteContainer">
+        <h4> Your Notes </h4>
+        {notes}
+      </div>
+    )
+  }
 
 export default NoteList;

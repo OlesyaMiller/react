@@ -2,9 +2,6 @@
 //parent Container passes the data to the
 //presentational component, handle events,
 //deal with React on behalf of Presentational component.
-
-
-
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -22,7 +19,7 @@ class Books extends Component {
      this.props.deleteBook(book)
   }
 
-  handleCardClick = (book, note) => {
+  handleNoteClick = (book, note) => {
   //create action creater that fetches notes index
     this.props.fetchNotes(book, note)
   }
@@ -33,7 +30,7 @@ class Books extends Component {
         <BookForm />
         <BookList books={this.props.books}
         handleOnClick={this.handleOnClick}
-        handleCardClick={this.handleCardClick} />
+        handleCardClick={this.handleNoteClick} />
       </div>
     )
   }
