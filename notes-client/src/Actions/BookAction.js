@@ -22,15 +22,22 @@ export function createBook(book) {
   }
 }
 
-// export function deleteBook(book) {
-//   return (dispatch) => {
-//     return fetch(`http://localhost:3000/api/${book.id}`, {
-//       method: 'DELETE',
-// }
-
-export function deleteBook(book) {
+export function removeBook(book) {
   return {
     type: 'REMOVE_BOOK',
     book
   };
 };
+
+export function deleteBook(book) {
+tch   return dispatch(removeBook(book));
+    return fetch(`http://localhost:3000/api/books/${book.id}`, {
+      method: 'DELETE',
+          body: JSON.stringify(book),
+          headers: {
+            'Content-Type': 'application/json',
+          }
+          })
+          .then(res => console.log(res))
+          // .then(data => dispatch( { type: 'REMOVE_BOOK', payload: data }))
+          }
