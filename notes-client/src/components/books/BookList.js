@@ -1,10 +1,12 @@
+//book lists presentational component
+
 import React from 'react';
 
 const BookList = (props) => {
 
   const books = props.books.map((book, index) => {
     return (
-      <div className="BookCard" key={book.id} >
+      <div className="BookCard" key={book.id} onClick={() => props.handleCardClick(book)}>
         <button onClick={() => props.handleOnClick(book)}>x</button>
         <h4> {book.title}</h4>
         <h5> {book.author}</h5>

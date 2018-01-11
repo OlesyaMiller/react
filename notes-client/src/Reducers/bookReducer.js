@@ -1,9 +1,16 @@
+//reducers take an action and the current state that was sent via a dispatch
+//and apply the action to the current state that then returns a new state
+//Reducers are functions that take “state”
+//from Redux and “action” JSON object and returns a
+//new “state” to be stored back in Redux.
+
+
 export default function BookReducer( state = {
   books: []
 }, action) {
     switch(action.type){
-      case "FETCH_BOOKS":
-         return {...state, books: action.payload}
+      case "FETCH_BOOKS": //actions
+         return {...state, books: action.payload} //takes new book state and merges it with the state
       case "CREATE_BOOK":
         return {...state, books: [...state.books, action.payload]}
       case "REMOVE_BOOK":
@@ -13,12 +20,6 @@ export default function BookReducer( state = {
     }
   }
 
-
-// case "REMOVE_BOOK":
-// let books = state.filter(book => book.id !== action.book.id)
-      // return books
-//
-//
-//
-// return { hostnames: state.hostnames.filter(hostname =>
-//      hostname.id !== action.hostnameId
+  // If the reducer changes the state, Redux passes
+  // the new state to each component and React
+  // re-renders each component

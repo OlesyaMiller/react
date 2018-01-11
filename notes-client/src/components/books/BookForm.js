@@ -1,3 +1,5 @@
+//forms have no state since they are creating a new instance??
+//
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';

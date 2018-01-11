@@ -7,9 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-Note.create(content: 'This book is great', book_id: 1)
-Note.create(content: 'This book is amazing', book_id: 2)
-Note.create(content: 'My favorite book', book_id: 3)
+Note.create(content: 'This book is great', book_id: 19)
+# Note.create(content: 'This book is amazing', book_id: 2)
+# Note.create(content: 'My favorite book', book_id: 3)
 
 
 # Book.create(title: 'Harry Potter and the Chamber of Secrets', author: "JK Rowling", img_url: nil)
