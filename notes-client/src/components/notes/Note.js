@@ -21,9 +21,9 @@ class Notes extends Component {
   }
 }
 
-// const mapStateToProps = (state) => {
-//   return { notes: state.books.notes }
-// }
+const mapStateToProps = (state) => {
+  return { note: state.notes.notes }
+}
 //
 // function mapDispatchToProps(dispatch) {
 //   return bindActionCreators({ deleteBook, fetchNotes }, dispatch)

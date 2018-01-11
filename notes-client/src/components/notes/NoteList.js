@@ -4,7 +4,7 @@ import React from 'react';
 
 const NoteList = (props) => {
 
-  const notes = props.notes.map((note, index) => {
+  const notes = props.notes.map((note) => {
     return (
       <div className="NoteCard" key={note.id}>
         <h4> {note.content}</h4>
