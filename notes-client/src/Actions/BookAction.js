@@ -30,14 +30,16 @@ export function removeBook(book) {
 };
 
 export function deleteBook(book) {
-tch   return dispatch(removeBook(book));
-    return fetch(`http://localhost:3000/api/books/${book.id}`, {
-      method: 'DELETE',
-          body: JSON.stringify(book),
-          headers: {
-            'Content-Type': 'application/json',
-          }
-          })
-          .then(res => console.log(res))
-          // .then(data => dispatch( { type: 'REMOVE_BOOK', payload: data }))
-          }
+	return dispatch => {
+	 dispatch(removeBook(book));
+	 return fetch(`http://localhost:3000/api/books/${book.id}`, {
+      	method: 'DELETE',
+        body: JSON.stringify(book),
+        headers: {
+        'Content-Type': 'application/json',
+        }
+       })
+       .then(res => console.log(res))
+        // .then(data => dispatch( { type: 'REMOVE_BOOK', payload: data }))
+	}
+}
