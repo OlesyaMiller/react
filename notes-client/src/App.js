@@ -16,12 +16,14 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About';
 import { fetchBooks } from './Actions/BookAction'
+import { fetchNotes } from './Actions/notesAction'
+
 
 class App extends Component {
 
   componentDidMount() {
     this.props.fetchBooks();
-    // this.props.fetchNotes();
+    this.props.fetchNotes();
   }
 
   render () {
@@ -55,7 +57,7 @@ class App extends Component {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ fetchBooks }, dispatch)
+  return bindActionCreators({ fetchBooks, fetchNotes }, dispatch)
 }
 
 export default connect(null, mapDispatchToProps)(App)

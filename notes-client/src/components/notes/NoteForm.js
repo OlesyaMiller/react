@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as actions from '../../Actions/BookAction';
 
   class NoteForm extends Component {
     constructor(props) {
@@ -16,11 +19,15 @@ import React, { Component } from 'react';
 
     handleOnSubmit = (event) => {
       event.preventDefault();
-      this.props.onSubmit(this.state);
-      this.setState({
-        content: ''
-      })
+    const note = {
+      content: this.state.content,
+      book_id: this.props.bookId
     }
+    this.props.createNote(note)
+    this.setState({
+      content: ''
+    })
+  }
 
     render(){
       return (
@@ -43,4 +50,8 @@ import React, { Component } from 'react';
     }
   }
 
-export default NoteForm;
+  const mapDispatchToProps = (dispatch) => {
+     return { actions: bindActionCreators(actions, dispatch)};
+  }
+
+export default connect(null, mapDispatchToProps)(NoteForm)

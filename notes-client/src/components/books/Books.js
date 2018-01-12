@@ -19,9 +19,9 @@ class Books extends Component {
      this.props.deleteBook(book)
   }
 
-  handleNoteClick = (book, note) => {
+  handleNoteClick = (book) => {
   //create action creater that fetches notes index
-    this.props.fetchNotes(note)
+    this.props.fetchNotes()
   }
 
   render() {
@@ -30,7 +30,7 @@ class Books extends Component {
         <BookForm />
         <BookList books={this.props.books}
         handleOnClick={this.handleOnClick}
-        handleCardClick={this.handleNoteClick} />
+        handleNoteClick={this.handleNoteClick} />
       </div>
     )
   }
