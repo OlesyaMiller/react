@@ -4,7 +4,7 @@
 
 .App-header {
   background-color: #222;
-  height: 75Bookpx;
+  /*height: 75Bookpx;*/
   padding: 5px;
   color: white;
 }
@@ -68,7 +68,7 @@
 
 .footer p {
   font-size: 12px;
-  margin: 3px;
+  margin: 1px;
 }
 
   /* Navbar */

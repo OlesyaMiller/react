@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-Note.create(content: 'This book is great', book_id: 19)
+Note.create(content: 'This book is great', book_id: 40)
 # Note.create(content: 'This book is amazing', book_id: 2)
 # Note.create(content: 'My favorite book', book_id: 3)
 

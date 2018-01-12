@@ -22,7 +22,7 @@ class Notes extends Component {
 }
 
 const mapStateToProps = (state) => {
-  return { note: state.notes.notes }
+  return { notes: state.notes.notes }
 }
 //
 // function mapDispatchToProps(dispatch) {
@@ -33,5 +33,5 @@ const mapStateToProps = (state) => {
 // and then dispatches the actions. Redux
 // then send the actions to “Reducers”
 
-export default Notes;
+export default connect(mapStateToProps)(Notes);
 //connect intercepts the action and and dispatches it to the store

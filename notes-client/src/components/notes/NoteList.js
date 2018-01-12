@@ -3,7 +3,7 @@
 import React from 'react';
 
 const NoteList = (props) => {
-
+console.log(props)
   const notes = props.notes.map((note) => {
     return (
       <div className="NoteCard" key={note.id}>

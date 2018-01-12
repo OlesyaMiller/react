@@ -21,7 +21,7 @@ class Books extends Component {
 
   handleNoteClick = (book, note) => {
   //create action creater that fetches notes index
-    this.props.fetchNotes(book, note)
+    this.props.fetchNotes(note)
   }
 
   render() {

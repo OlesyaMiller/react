@@ -1,5 +1,4 @@
 export default function NoteReducer( state = {
-  books: [],
   notes: []
 }, action) {
     switch(action.type){

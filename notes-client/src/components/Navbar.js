@@ -24,7 +24,14 @@ const NavBar = () => {
           activeStyle={{
             color: 'white'
           }}
-        > About </NavLink>
+        > About </NavLink> |
+
+        <NavLink
+          to="/"
+          activeStyle={{
+            color: 'white'
+          }}
+        > Your Book notes </NavLink>
     </div>
 
   )
