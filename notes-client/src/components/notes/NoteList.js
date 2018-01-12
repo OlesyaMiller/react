@@ -8,6 +8,7 @@ console.log(props)
     return (
       <div className="NoteCard" key={note.id}>
         <h4> {note.content}</h4>
+        <button>Edit</button>
       </div>
     )
   })
@@ -21,3 +22,7 @@ console.log(props)
   }
 
 export default NoteList;
+
+
+//components are only supposed to be concerned with displaying stuff
+//The only place they are supposed to get information from is their props.

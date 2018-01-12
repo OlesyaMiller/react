@@ -8,28 +8,28 @@ const NavBar = () => {
           to="/home"
           exact
           activeStyle={{
-            color: 'white'
+            color: 'black'
           }}
         >Home </NavLink> |
 
         <NavLink
           to="/contact"
           activeStyle={{
-            color: 'white'
+            color: 'black'
           }}
         > Contact</NavLink> |
 
         <NavLink
           to="/about"
           activeStyle={{
-            color: 'white'
+            color: 'black'
           }}
         > About </NavLink> |
 
         <NavLink
           to="/"
           activeStyle={{
-            color: 'white'
+            color: 'black'
           }}
         > Your Book notes </NavLink>
     </div>
