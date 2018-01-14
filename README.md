@@ -16,4 +16,4 @@ This is the API side of the app Book Notes. You'll need to have this running for
 
   ## License
 
-  Copyright (c) 2018 Aysan Isayo. Full license [here](https://github.com/aisayo/react/License.md).
+  Copyright (c) 2018 Aysan Isayo. Full license [here](https://github.com/aisayo/react/blob/master/License.md).
