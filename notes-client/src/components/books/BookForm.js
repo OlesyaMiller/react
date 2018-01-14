@@ -1,13 +1,14 @@
-//forms have no state since they are creating a new instance??
-//
+//this is a smart component because it connects to the store
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actions from '../../Actions/BookAction';
 
+//constructor initializes the state
+//this.state builds the state
   class BookForm extends Component {
-    constructor(props) {
-      super(props);
+    constructor() {
+      super();
 
       this.state = {
         title: "",
@@ -16,11 +17,15 @@ import * as actions from '../../Actions/BookAction';
       }
     }
 
+    //event.target is the target of that event, the input
+    //this.setState here allows for input to change state
+    //without it, form will not allow input
     handleChange = (event) => {
       const { name, value } = event.target;
       this.setState({[name]: value});
     }
 
+    //this.state refers to whats inputed to change state
     handleOnSubmit = (event) => {
       event.preventDefault();
       this.props.actions.createBook(this.state);

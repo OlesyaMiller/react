@@ -1,10 +1,10 @@
 //this is a containter component.
 //that means that this is the parent component
-//and holds all the children components
+//since app holds all components, it is a top level component
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, } from 'react-router-dom';
 
 import './App.css';
 import Books from './components/books/Books';
@@ -15,22 +15,23 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About';
 import { fetchBooks } from './Actions/BookAction'
-import { fetchNotes } from './Actions/notesAction'
 
 class App extends Component {
 
+//this is called only once after the component is mounted
+//used to perform any DOM manipulation of data-fetching that component needs.
+//in this case, when app mounts, we will fetch the list of books to be applied
+//to the route being used.
   componentDidMount() {
     this.props.fetchBooks();
-    this.props.fetchNotes();
   }
 
   render () {
     return (
-        <div>
-          <div className='App'>
+      <div>
+        <div className='App'>
             <header className="App-header">
               <h1 className="App-title">Book-Notes</h1>
-
             </header>
             <Router>
               <div className="routes">
@@ -43,16 +44,16 @@ class App extends Component {
                     <Route path="/notes" component={Notes} />
                   </Switch>
               </div>
-              </Router>
+            </Router>
         </div>
-        <Footer/>
-      </div>
+          <Footer/>
+        </div>
     )
   }
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ fetchBooks, fetchNotes }, dispatch)
+  return bindActionCreators({ fetchBooks }, dispatch)
 }
 
 export default connect(null, mapDispatchToProps)(App)

@@ -1,3 +1,5 @@
+//this is just a presentational component. "dumb"
+
 import React from 'react';
 
 const Footer = () => {

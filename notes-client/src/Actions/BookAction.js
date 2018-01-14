@@ -15,7 +15,7 @@ export function fetchBooks() {
 
 export function createBook(book) {
   return (dispatch) => {
-    return fetch('http://localhost:3000/api/books', { //grab books index 
+    return fetch('http://localhost:3000/api/books', { //grab books index
       method: 'POST', //post verb
       body: JSON.stringify(book), //you stringify this bc you can only send strings across webs
       headers: {

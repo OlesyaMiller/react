@@ -12,19 +12,17 @@ import * as actions from '../../Actions/BookAction';
       }
     }
 
+    //event = change
     handleChange = (event) => {
       const { name, value } = event.target;
       this.setState({[name]: value});
     }
 
+    //event = submit
     handleOnSubmit = (event) => {
       event.preventDefault();
-    const note = {
-      content: this.state.content,
-      book_id: this.props.bookId
-    }
-    this.props.createNote(note)
-    this.setState({
+      this.props.actions.createNote(this.state);
+      this.setState({
       content: ''
     })
   }
