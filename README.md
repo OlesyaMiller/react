@@ -1,7 +1,7 @@
-#Book-Notes
+# Book-Notes
 
 
-##Description
+## Description
 This is an app for all book lovers to come to and keep track of their notes on books.
 It is an excellent resource for any students who need to read a book for their class
 and need a place to track their thoughts and notes.
