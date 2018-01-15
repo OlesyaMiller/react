@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as actions from '../../Actions/BookAction';
+import * as actions from '../../Actions/notesAction';
 
   class NoteForm extends Component {
     constructor(props) {

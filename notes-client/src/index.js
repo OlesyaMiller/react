@@ -9,7 +9,7 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import rootReducer from './Reducers/Root';
 
-//creates store
+//creates store which holds all state
 //rootReducer, is a reducer combiner
 //thunk middleware allows you to write function
 //action creators instead of actions, it also allows

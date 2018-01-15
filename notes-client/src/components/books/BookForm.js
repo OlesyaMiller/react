@@ -18,14 +18,18 @@ import * as actions from '../../Actions/BookAction';
     }
 
     //event.target is the target of that event, the input
+    //we pass in the event that comes from the onChange event
+    //handler
     //this.setState here allows for input to change state
     //without it, form will not allow input
     handleChange = (event) => {
+
       const { name, value } = event.target;
       this.setState({[name]: value});
     }
 
     //this.state refers to whats inputed to change state
+    //on submission of form, dispatch action to store
     handleOnSubmit = (event) => {
       event.preventDefault();
       this.props.actions.createBook(this.state);
@@ -36,6 +40,10 @@ import * as actions from '../../Actions/BookAction';
       })
     }
 
+    //onChange={(event) => this.handleChange(event)}
+      //All this code does is say that every time the user changes the input field (that is,
+      //whenever he types something in) we should call our handleChange() function
+      //arrow function allows to avoid creating a new lexical scope
     render(){
       return (
         <div>

@@ -1,10 +1,10 @@
-//reducers take an action and the current state that was sent via a dispatch
+//reducers take an action and the current state that was sent via a dispatch as arguments
 //and apply the action to the current state that then returns a new state
 //Reducers are functions that take “state”
 //from Redux and “action” JSON object and returns a
 //new “state” to be stored back in Redux.
 
-
+//here we are setting the initial state to books: []
 export default function BookReducer( state = {
   books: []
 }, action) {
