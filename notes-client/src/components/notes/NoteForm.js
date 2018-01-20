@@ -9,6 +9,7 @@ import * as actions from '../../Actions/notesAction';
 
       this.state = {
         content: "",
+        likes: 0
       }
     }
 
@@ -21,7 +22,7 @@ import * as actions from '../../Actions/notesAction';
     //event = submit
     handleOnSubmit = (event) => {
       event.preventDefault();
-      this.props.actions.createNote(this.state);
+      this.props.actions.createNote(this.book);
       this.setState({
       content: ''
     })
@@ -52,4 +53,8 @@ import * as actions from '../../Actions/notesAction';
      return { actions: bindActionCreators(actions, dispatch)};
   }
 
-export default connect(null, mapDispatchToProps)(NoteForm)
+  const mapStateToProps = (state) => {
+    return { books: state.books.books }
+  }
+
+export default connect(mapStateToProps, mapDispatchToProps)(NoteForm)

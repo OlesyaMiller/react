@@ -4,17 +4,15 @@
 //from Redux and “action” JSON object and returns a
 //new “state” to be stored back in Redux.
 
-//here we are setting the initial state to books: []
-export default function BookReducer( state = {
-  books: []
-}, action) {
+//here we are setting the initial state []
+export default function BookReducer( state = [], action) {
     switch(action.type){
       case "FETCH_BOOKS": //actions
-         return {...state, books: action.payload} //takes new book state and merges it with the state
+         return action.payload //takes new book state and merges it with the state
       case "CREATE_BOOK":
-        return {...state, books: [...state.books, action.payload]}
+        return state.concat(action.payload)
       case "REMOVE_BOOK":
-        return { books: state.books.filter(book => book.id !== action.book.id)}
+        return state.filter(book => book.id !== action.book.id)
       default: //this just returns default state with no changes made
         return state;
     }

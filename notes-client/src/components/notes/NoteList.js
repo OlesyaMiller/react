@@ -6,8 +6,10 @@ const NoteList = (props) => {
   const notes = props.notes.map((note) => {
     return (
       <div className="NoteCard" key={note.id}>
+        <button onClick={() => props.handleOnDelete(note)}>x</button>
         <h4> {note.content}</h4>
-        <button>Edit</button>
+        <button onClick={() => props.handleOnEdit(note)}>Edit</button>
+        <button onClick={() => props.handleOnLike(note)}>{props.count}</button>
       </div>
     )
   })
