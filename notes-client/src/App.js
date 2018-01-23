@@ -2,9 +2,9 @@
 //that means that this is the parent component
 //since app holds all components, it is a top level component
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux'
 import { BrowserRouter as Router, Route, Switch, } from 'react-router-dom';
+import { connect } from 'react-redux';
+
 
 import './App.css';
 import Books from './components/books/Books';
@@ -16,23 +16,25 @@ import Home from './components/Home';
 import About from './components/About';
 import { fetchBooks } from './Actions/BookAction'
 
+
 class App extends Component {
 
 //this is called only once after the component is mounted
 //used to perform any DOM manipulation of data-fetching that component needs.
 //in this case, when app mounts, we will fetch the list of books to be applied
 //to the route being used.
-  componentDidMount() {
-    this.props.fetchBooks();
-  }
+
+componentDidMount() {
+  this.props.fetchBooks();
+}
 
   render () {
     return (
       <div>
         <div className='App'>
-            <header className="App-header">
-              <h1 className="App-title">Book-Notes</h1>
-            </header>
+          <header className="App-header">
+            <h1 className="App-title">Book-Notes</h1>
+          </header>
             <Router>
               <div className="routes">
                 <Navbar />
@@ -52,8 +54,5 @@ class App extends Component {
   }
 }
 
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ fetchBooks }, dispatch)
-}
 
-export default connect(null, mapDispatchToProps)(App)
+export default connect(null, { fetchBooks })(App);
