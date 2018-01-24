@@ -54,3 +54,32 @@ export function deleteBook(book) { //remove back in database
        //for new state to be sent to rails back end to update database
 	}
 }
+
+
+export function increaseLike(likeInfo) {
+  return (dispatch) => {
+    return fetch(`http://localhost:3000/api/books/${likeInfo.id}`, {
+      method: 'PATCH',
+      body: JSON.stringify(likeInfo),
+      headers: {
+        'Content-Type': 'application/json',
+      }
+    })
+      .then(res => res.json()) //then turn into json data
+      .then(data => dispatch( { type: 'INCREASE_LIKE', payload: data })) //dispatch to action, and payload = data
+  }
+}
+
+export function decreaseLike(dislikeInfo) {
+  return (dispatch) => {
+    return fetch(`http://localhost:3000/api/books/${dislikeInfo.id}`, {
+      method: 'PATCH',
+      body: JSON.stringify(dislikeInfo),
+      headers: {
+        'Content-Type': 'application/json',
+      }
+    })
+      .then(res => res.json()) //then turn into json data
+      .then(data => dispatch( { type: 'DECREASE_LIKE', payload: data }))
+  }
+}

@@ -13,6 +13,14 @@ export default function BookReducer( state = [], action) {
         return state.concat(action.payload)
       case "REMOVE_BOOK":
         return state.filter(book => book.id !== action.book.id)
+      case "INCREASE_LIKE":
+        let bookL = state.filter(book => book.id === action.payload.id)[0]
+        let bookLike = Object.assign({}, bookL, { likes: action.payload.like })
+        return state.map(book => book.id === action.payload.id ? bookLike : book)
+      case "DECREASE_LIKE":
+        let bookD = state.filter(book => book.id === action.payload.id)[0]
+        let bookDislike = Object.assign({}, bookD, { likes: action.payload.like })
+        return state.map(book => book.id === action.payload.id ? bookDislike : book)
       default: //this just returns default state with no changes made
         return state;
     }
