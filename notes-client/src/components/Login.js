@@ -10,6 +10,10 @@ class Login extends Component {
     }
   }
 
+  handleChange = (event) => {
+    const { name, value } = event.target;
+    this.setState({[name]: value});
+  }
 
   render(){
     return(
@@ -20,6 +24,7 @@ class Login extends Component {
               type="text"
               name="username"
               value={this.state.username}
+              onChange={(event) => this.handleChange(event)}
             />
 
           < br />
@@ -30,6 +35,7 @@ class Login extends Component {
             type="text"
             name="password"
             value={this.state.password}
+            onChange={(event) => this.handleChange(event)}
           />
 
           < br />
