@@ -11,7 +11,7 @@ class Login extends Component {
   }
 
   validateForm() {
-    return this.state.email.length > 0 && this.state.password.length > 0;
+    return this.state.username.length > 0 && this.state.password.length > 0;
   }
 
 
@@ -46,8 +46,13 @@ class Login extends Component {
           < br />
           < br />
 
-          <button type="submit" className="loginButton"> Login </button>
-
+          <button
+                      
+                      disabled={!this.validateForm()}
+                      type="submit"
+                    >
+                      Login
+                    </button>
           < br />
           < br />
         </form>
