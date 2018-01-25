@@ -22,7 +22,7 @@ class Book extends Component {
 
   handleOnLike = () => {
     const likeInfo = {
-      like: this.props.book.like += 1,
+      like: this.props.book.like + 1,
       id: this.props.book.id
     }
     this.props.increaseLike(likeInfo);
@@ -30,7 +30,7 @@ class Book extends Component {
 
   handleOnDislike = () => {
     const dislikeInfo = {
-      like: this.props.book.like -= 1,
+      like: this.props.book.like - 1,
       id: this.props.book.id
     }
     if (this.props.book.like > 0) {
