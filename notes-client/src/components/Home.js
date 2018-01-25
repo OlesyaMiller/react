@@ -9,7 +9,7 @@ const Home = () => {
     <div className="home">
       <div className="home">
         <h1> Welcome to Book-Notes </h1>
-        <h3> Login or Signup Below : </h3>
+        <h3> Login Below : </h3>
         < Login />
         Dont have an account?<Link to=''>Sign Up!</Link>
       </div>

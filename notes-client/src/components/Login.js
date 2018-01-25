@@ -10,6 +10,11 @@ class Login extends Component {
     }
   }
 
+  validateForm() {
+    return this.state.email.length > 0 && this.state.password.length > 0;
+  }
+
+
   handleChange = (event) => {
     const { name, value } = event.target;
     this.setState({[name]: value});
@@ -18,7 +23,7 @@ class Login extends Component {
   render(){
     return(
       <div>
-        <form>
+        <form onSubmit={this.handleOnSubmit}>
           <label htmlFor="username"><b>Username:</b> </label>
             <input
               type="text"
@@ -41,7 +46,7 @@ class Login extends Component {
           < br />
           < br />
 
-          <button className="loginButton"> Login </button>
+          <button type="submit" className="loginButton"> Login </button>
 
           < br />
           < br />
