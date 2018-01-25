@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 
 const Like = (props) => {
@@ -7,8 +6,8 @@ const Like = (props) => {
     <div>
     {props.like}
     <br/>
-    <Link to="" onClick={props.handleOnLike}>Like</Link>
-    <Link to="" onClick={props.handleOnDislike}>Dislike</Link>
+    <button onClick={props.handleOnLike}>Like</button>
+    <button onClick={props.handleOnDislike}>Dislike</button>
     </div>
   )
 }

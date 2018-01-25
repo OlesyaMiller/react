@@ -15,7 +15,9 @@ export default function BookReducer( state = [], action) {
         return state.filter(book => book.id !== action.book.id)
       case "INCREASE_LIKE":
         let bookL = state.filter(book => book.id === action.payload.id)[0]
+        console.log("bookL", bookL)
         let bookLike = Object.assign({}, bookL, { like: action.payload.like })
+        console.log("bookLike", bookLike)
         return state.map(book => book.id === action.payload.id ? bookLike : book)
       case "DECREASE_LIKE":
         let bookD = state.filter(book => book.id === action.payload.id)[0]

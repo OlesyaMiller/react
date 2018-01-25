@@ -6,6 +6,8 @@ import {deleteBook} from '../../Actions/BookAction';
 import {fetchNotes} from '../../Actions/notesAction';
 import {increaseLike} from '../../Actions/BookAction';
 import {decreaseLike} from '../../Actions/BookAction';
+
+
 import Like from './like'
 
 class Book extends Component {
