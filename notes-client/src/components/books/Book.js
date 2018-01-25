@@ -20,17 +20,9 @@ class Book extends Component {
   //   }
   // }
 
-  handleOnClickLike = () => {
-  const updateInfo = {
-    likes: this.props.comment.likes += 1,
-    id: this.props.comment.id
-  }
-  this.props.updateLikes(updateInfo);
-}
-
   handleOnLike = () => {
     const likeInfo = {
-      likes: this.props.book.like += 1,
+      like: this.props.book.like += 1,
       id: this.props.book.id
     }
     this.props.increaseLike(likeInfo);
@@ -38,7 +30,7 @@ class Book extends Component {
 
   handleOnDislike = () => {
     const dislikeInfo = {
-      likes: this.props.book.like -= 1,
+      like: this.props.book.like -= 1,
       id: this.props.book.id
     }
     if (this.props.book.like > 0) {
